@@ -3,39 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VERITY | The Only Truth in Minecraft</title>
-  <meta name="description" content="VERITY - Minecraft meme coin. The only truth in Minecraft is Verity. $VERITY on Ethereum.">
-  <meta property="og:title" content="VERITY - The Only Truth in Minecraft">
-  <meta property="og:description" content="Minecraft meme coin. Verity is truth. $VERITY">
+  <title>VERITY™ | It's Me, It's Verity</title>
+  <meta name="description" content="VERITY™ - The viral Minecraft horror ARG by ThatMob. Yellow smiley AI turned monster. Featuring Horror Skunx's 'It's Me, It's Verity' song. $VERITY on Solana.">
+  <meta property="og:title" content="VERITY™ - It's Me, It's Verity">
+  <meta property="og:description" content="The viral Minecraft horror ARG. Yellow smiley face AI. Horror Skunx's viral song. $VERITY meme coin.">
   <meta property="og:image" content="og.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Creepster&display=swap" rel="stylesheet">
   <style>
     :root {
-      --mc-green: #5dac2d;
-      --mc-dark: #1a1a1a;
-      --mc-dirt: #8b6b42;
-      --mc-stone: #7d7d7d;
-      --mc-gold: #ffd700;
-      --mc-red: #cc3333;
-      --glitch-1: #ff0066;
-      --glitch-2: #00ffff;
-      --bg: #0d0d0d;
+      --verity-yellow: #ffeb3b;
+      --verity-yellow-dark: #fdd835;
+      --verity-black: #0a0a0a;
+      --verity-dark: #111;
+      --verity-blood: #8b0000;
+      --verity-red: #cc0000;
+      --verity-glitch-1: #ff0066;
+      --verity-glitch-2: #00ffff;
+      --verity-gray: #333;
+      --verity-white: #fff;
+      --bg: #050505;
+      --card-bg: #0d0d0d;
+      --border: #2a2a2a;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     @keyframes scanlines { 0% { background-position: 0 0; } 100% { background-position: 0 4px; } }
-    @keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
-    @keyframes glitch { 0% { text-shadow: 2px 0 var(--glitch-1), -2px 0 var(--glitch-2); } 20% { text-shadow: -2px 0 var(--glitch-1), 2px 0 var(--glitch-2); } 40% { text-shadow: 2px 2px var(--glitch-1), -2px -2px var(--glitch-2); } 60% { text-shadow: -1px 0 var(--glitch-1), 1px 0 var(--glitch-2); } 80% { text-shadow: 0 2px var(--glitch-1), 0 -2px var(--glitch-2); } 100% { text-shadow: 2px 0 var(--glitch-1), -2px 0 var(--glitch-2); } }
-    @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 20px var(--mc-green), 0 0 40px var(--mc-green); } 50% { box-shadow: 0 0 40px var(--mc-green), 0 0 80px var(--mc-green); } }
-    @keyframes crt-flicker { 0% { opacity: 1; } 98% { opacity: 1; } 99% { opacity: 0.95; } 100% { opacity: 1; } }
+    @keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(3deg); } }
+    @keyframes glitch { 0% { text-shadow: 2px 0 var(--verity-glitch-1), -2px 0 var(--verity-glitch-2); } 20% { text-shadow: -2px 0 var(--verity-glitch-1), 2px 0 var(--verity-glitch-2); } 40% { text-shadow: 2px 2px var(--verity-glitch-1), -2px -2px var(--verity-glitch-2); } 60% { text-shadow: -1px 0 var(--verity-glitch-1), 1px 0 var(--verity-glitch-2); } 80% { text-shadow: 0 2px var(--verity-glitch-1), 0 -2px var(--verity-glitch-2); } 100% { text-shadow: 2px 0 var(--verity-glitch-1), -2px 0 var(--verity-glitch-2); } }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    @keyframes breathe { 0%,100% { opacity: 1; } 50% { opacity: 0.7; } }
+    @keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+    @keyframes crt-flicker { 0% { opacity: 1; } 98% { opacity: 1; } 99% { opacity: 0.92; } 100% { opacity: 1; } }
+    @keyframes eye-blink { 0%,45%,55%,100% { height: 12px; } 50% { height: 2px; } }
+    @keyframes smile-widen { 0%,100% { width: 60%; border-radius: 0 0 50px 50px; } 50% { width: 80%; border-radius: 0 0 30px 30px; } }
+    @keyframes float-particle { 0%,100% { transform: translateY(0) translateX(0); opacity: 0.4; } 25% { transform: translateY(-30px) translateX(10px); opacity: 0.8; } 50% { transform: translateY(-60px) translateX(-5px); opacity: 0.6; } 75% { transform: translateY(-90px) translateX(15px); opacity: 0.3; } }
     body {
       font-family: 'VT323', monospace;
       background: var(--bg);
-      color: #e0e0e0;
+      color: var(--verity-white);
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
@@ -49,103 +58,294 @@
       animation: scanlines 0.3s linear infinite;
       pointer-events: none;
       z-index: 9999;
-      opacity: 0.4;
+      opacity: 0.35;
     }
     .crt-overlay {
       position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.4) 100%);
+      background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.5) 100%);
       pointer-events: none; z-index: 9998;
-      animation: crt-flicker 4s ease-in-out infinite;
+      animation: crt-flicker 5s ease-in-out infinite;
     }
     .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: hidden; }
     .particle {
-      position: absolute; width: 4px; height: 4px;
-      background: var(--mc-green);
-      border-radius: 0;
-      animation: float 8s ease-in-out infinite;
-      opacity: 0.6;
+      position: absolute; width: 3px; height: 3px;
+      background: var(--verity-yellow);
+      border-radius: 50%;
+      animation: float-particle 15s ease-in-out infinite;
+      opacity: 0;
+      filter: blur(0.5px);
+    }
+    header { position: relative; z-index: 10; padding: 3rem 1rem 2rem; text-align: center; }
+    .verity-logo {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .verity-logo:hover { transform: scale(1.02); }
+    .verity-face {
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle at 30% 30%, #fff9c4 0%, var(--verity-yellow) 40%, #fbc02d 100%);
+      border: 4px solid var(--verity-black);
+      border-radius: 50%;
+      position: relative;
+      box-shadow: 
+        0 0 30px var(--verity-yellow),
+        0 0 60px rgba(255,235,59,0.4),
+        inset 0 -10px 20px rgba(0,0,0,0.2),
+        inset 0 10px 20px rgba(255,255,255,0.1);
+      animation: pulse 3s ease-in-out infinite, breathe 4s ease-in-out infinite;
       image-rendering: pixelated;
     }
-    .particle:nth-child(odd) { background: var(--mc-gold); animation-duration: 10s; }
-    .particle:nth-child(3n) { background: var(--glitch-1); animation-duration: 6s; }
-    header { position: relative; z-index: 10; padding: 2rem 1rem; text-align: center; }
-    .logo {
-      font-family: 'Press Start 2P', cursive;
-      font-size: clamp(2rem, 8vw, 4rem);
-      color: var(--mc-green);
-      text-shadow: 4px 4px 0 var(--mc-dark), 8px 8px 0 var(--mc-dirt);
-      animation: glitch 3s ease-in-out infinite;
-      letter-spacing: 0.1em;
-      display: inline-block;
-      transform: rotate(-2deg);
+    .verity-face::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 50%;
+      filter: blur(1px);
     }
+    .verity-eyes {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 24px;
+    }
+    .verity-eye {
+      width: 14px;
+      height: 14px;
+      background: var(--verity-black);
+      border-radius: 50%;
+      animation: eye-blink 6s ease-in-out infinite;
+      box-shadow: 0 0 4px var(--verity-black);
+    }
+    .verity-eye.left { animation-delay: 0s; }
+    .verity-eye.right { animation-delay: 0.1s; }
+    .verity-smile {
+      position: absolute;
+      bottom: 22%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60%;
+      height: 8px;
+      background: var(--verity-black);
+      border-radius: 0 0 50px 50px;
+      animation: smile-widen 4s ease-in-out infinite;
+      box-shadow: 0 2px 4px var(--verity-black);
+    }
+    .verity-face:hover .verity-smile { animation: smile-widen 0.5s ease-in-out infinite; }
+    .verity-face:hover .verity-eye { animation: eye-blink 1s ease-in-out infinite; }
+    .logo-text {
+      font-family: 'Creepster', cursive;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--verity-yellow);
+      text-shadow: 
+        3px 3px 0 var(--verity-black),
+        6px 6px 0 var(--verity-blood),
+        0 0 30px var(--verity-yellow);
+      letter-spacing: 0.08em;
+      animation: glitch 4s ease-in-out infinite;
+    }
+    .logo-text span { color: var(--verity-red); }
     .tagline {
       font-family: 'VT323', monospace;
-      font-size: clamp(1rem, 3vw, 1.5rem);
-      color: var(--mc-gold);
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--verity-yellow-dark);
       margin-top: 0.5rem;
-      text-shadow: 2px 2px 0 var(--mc-dark);
-      animation: pulse-glow 2s ease-in-out infinite;
+      text-shadow: 2px 2px 0 var(--verity-black);
+      animation: breathe 3s ease-in-out infinite;
     }
-    main { position: relative; z-index: 10; max-width: 900px; margin: 0 auto; padding: 0 1rem 4rem; }
+    .tagline span { color: var(--verity-red); font-family: 'Creepster', cursive; }
+    main { position: relative; z-index: 10; max-width: 1000px; margin: 0 auto; padding: 0 1rem 4rem; }
     .section {
-      background: linear-gradient(145deg, #151515, #0a0a0a);
-      border: 3px solid var(--mc-stone);
-      border-radius: 8px;
+      background: linear-gradient(145deg, #0f0f0f, #050505);
+      border: 2px solid var(--border);
+      border-radius: 12px;
       margin: 2rem 0;
       padding: 2rem;
       position: relative;
-      image-rendering: pixelated;
+      overflow: hidden;
     }
     .section::before {
-      content: ''; position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px;
-      background: linear-gradient(45deg, var(--mc-green), var(--mc-gold), var(--glitch-1), var(--glitch-2));
-      border-radius: 10px; z-index: -1; opacity: 0.3; filter: blur(8px);
+      content: '';
+      position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px;
+      background: linear-gradient(45deg, var(--verity-yellow), var(--verity-red), var(--verity-glitch-1), var(--verity-glitch-2));
+      border-radius: 14px; z-index: -1; opacity: 0.15; filter: blur(10px);
     }
     .section h2 {
       font-family: 'Press Start 2P', cursive;
-      font-size: clamp(0.8rem, 2.5vw, 1.2rem);
-      color: var(--mc-green);
+      font-size: clamp(0.7rem, 2vw, 1rem);
+      color: var(--verity-yellow);
       margin-bottom: 1.5rem;
       text-transform: uppercase;
-      border-bottom: 2px dashed var(--mc-stone);
+      border-bottom: 2px dashed var(--border);
       padding-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
-    .token-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
-    .token-card {
-      background: rgba(0,0,0,0.5);
-      border: 2px solid var(--mc-stone);
+    .section h2::before {
+      content: '►';
+      color: var(--verity-red);
+      animation: pulse 1s ease-in-out infinite;
+    }
+    .song-player {
+      background: var(--card-bg);
+      border: 2px solid var(--verity-yellow);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      margin: 1rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .song-player::before {
+      content: '♪';
+      position: absolute;
+      top: -20px;
+      right: 20px;
+      font-size: 4rem;
+      color: var(--verity-yellow);
+      opacity: 0.1;
+      animation: float 3s ease-in-out infinite;
+    }
+    .song-title {
+      font-family: 'Creepster', cursive;
+      font-size: 1.5rem;
+      color: var(--verity-yellow);
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 0 var(--verity-black);
+    }
+    .song-artist {
+      font-family: 'VT323', monospace;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+    .audio-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+    }
+    .progress-bar {
+      width: 100%;
+      max-width: 400px;
+      height: 8px;
+      background: var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--verity-yellow), var(--verity-red));
+      width: 0%;
+      transition: width 0.1s linear;
+      border-radius: 4px;
+    }
+    .time-display {
+      font-family: 'VT323', monospace;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    .play-btn {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.7rem;
+      padding: 0.75rem 2rem;
+      border: 3px solid var(--verity-yellow);
+      background: transparent;
+      color: var(--verity-yellow);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .play-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,235,59,0.2), transparent);
+      transition: left 0.4s;
+    }
+    .play-btn:hover { background: var(--verity-yellow); color: var(--verity-black); }
+    .play-btn:hover::before { left: 100%; }
+    .play-btn.playing { background: var(--verity-red); border-color: var(--verity-red); color: var(--verity-white); }
+    .lyrics-preview {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--border);
+      font-family: 'VT323', monospace;
+      font-size: 0.9rem;
+      color: #999;
+      line-height: 1.8;
+    }
+    .lyrics-preview span { color: var(--verity-yellow); }
+    .lyrics-preview .highlight { color: var(--verity-red); font-family: 'Creepster', cursive; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .card {
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      border-radius: 8px;
       padding: 1.5rem;
       text-align: center;
       transition: all 0.3s;
+      position: relative;
     }
-    .token-card:hover { border-color: var(--mc-green); transform: translateY(-4px) rotate(1deg); }
-    .token-label { font-family: 'Press Start 2P', cursive; font-size: 0.6rem; color: var(--mc-stone); text-transform: uppercase; }
-    .token-value { font-family: 'VT323', monospace; font-size: 1.5rem; color: var(--mc-gold); margin-top: 0.5rem; word-break: break-all; }
-    .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    .card:hover { border-color: var(--verity-yellow); transform: translateY(-4px) rotate(1deg); box-shadow: 0 10px 30px rgba(255,235,59,0.1); }
+    .card.verity-card { border-color: var(--verity-yellow); }
+    .card.verity-card::after {
+      content: '™';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--verity-red);
+      color: var(--verity-yellow);
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.5rem;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      border: 2px solid var(--verity-black);
+    }
+    .card-label { font-family: 'Press Start 2P', cursive; font-size: 0.55rem; color: var(--verity-gray); text-transform: uppercase; margin-bottom: 0.5rem; }
+    .card-value { font-family: 'VT323', monospace; font-size: 1.3rem; color: var(--verity-yellow); word-break: break-all; }
+    .card-value.red { color: var(--verity-red); }
+    .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
     .phase {
-      background: rgba(0,0,0,0.5);
-      border: 2px solid var(--mc-stone);
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      border-radius: 8px;
       padding: 1.5rem;
       text-align: center;
       position: relative;
       transition: all 0.3s;
     }
+    .phase:hover { border-color: var(--verity-yellow); transform: scale(1.02); }
     .phase::before {
       content: attr(data-phase);
       position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
       font-family: 'Press Start 2P', cursive; font-size: 0.5rem;
-      background: var(--mc-green); color: var(--mc-dark);
-      padding: 0.2rem 0.6rem; border: 2px solid var(--mc-dark);
+      background: var(--verity-yellow); color: var(--verity-black);
+      padding: 0.2rem 0.6rem; border: 2px solid var(--verity-black); border-radius: 4px;
     }
-    .phase:hover { border-color: var(--mc-gold); transform: scale(1.02); }
-    .phase h3 { font-family: 'Press Start 2P', cursive; font-size: 0.7rem; color: var(--mc-gold); margin-bottom: 0.5rem; }
-    .phase p { font-size: 0.9rem; color: #aaa; }
-    .links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
+    .phase.alt::before { background: var(--verity-red); color: var(--verity-yellow); }
+    .phase h3 { font-family: 'Creepster', cursive; font-size: 1rem; color: var(--verity-yellow); margin-bottom: 0.5rem; }
+    .phase p { font-size: 0.85rem; color: #aaa; }
+    .links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem; }
     .btn {
       font-family: 'Press Start 2P', cursive;
-      font-size: 0.7rem;
-      padding: 1rem 2rem;
+      font-size: 0.65rem;
+      padding: 1rem 1.5rem;
       border: 3px solid;
       border-radius: 4px;
       text-decoration: none;
@@ -153,74 +353,183 @@
       transition: all 0.2s;
       position: relative;
       overflow: hidden;
+      white-space: nowrap;
     }
-    .btn::before {
-      content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
+    .btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
     .btn:hover::before { left: 100%; }
-    .btn-primary { background: var(--mc-green); color: var(--mc-dark); border-color: var(--mc-green); }
-    .btn-primary:hover { background: var(--mc-gold); border-color: var(--mc-gold); color: var(--mc-dark); }
-    .btn-secondary { background: transparent; color: var(--mc-gold); border-color: var(--mc-stone); }
-    .btn-secondary:hover { background: var(--mc-stone); border-color: var(--mc-gold); color: var(--mc-dark); }
-    .btn-glitch { background: transparent; color: var(--glitch-1); border-color: var(--glitch-1); animation: glitch 2s infinite; }
-    .buy-section { text-align: center; padding: 3rem 1rem; }
-    .contract-address {
+    .btn-primary { background: var(--verity-yellow); color: var(--verity-black); border-color: var(--verity-yellow); }
+    .btn-primary:hover { background: var(--verity-red); border-color: var(--verity-red); color: var(--verity-yellow); }
+    .btn-secondary { background: transparent; color: var(--verity-yellow); border-color: var(--border); }
+    .btn-secondary:hover { background: var(--border); border-color: var(--verity-yellow); color: var(--verity-black); }
+    .btn-glitch { background: transparent; color: var(--verity-glitch-1); border-color: var(--verity-glitch-1); animation: glitch 2s infinite; }
+    .btn-glitch:hover { background: var(--verity-glitch-1); color: var(--verity-black); }
+    .contract-box {
       font-family: 'VT323', monospace;
-      font-size: 1rem;
-      color: var(--mc-stone);
-      background: rgba(0,0,0,0.5);
-      border: 1px dashed var(--mc-stone);
+      font-size: 0.9rem;
+      color: var(--verity-gray);
+      background: var(--card-bg);
+      border: 1px dashed var(--verity-yellow);
       padding: 1rem;
       margin: 1rem auto;
       max-width: 90%;
       word-break: break-all;
       user-select: all;
+      border-radius: 4px;
+      position: relative;
     }
-    footer { position: relative; z-index: 10; text-align: center; padding: 2rem; color: var(--mc-stone); font-size: 0.8rem; border-top: 1px solid var(--mc-stone); }
-    .disclaimer { margin-top: 1rem; font-size: 0.6rem; color: #555; }
+    .contract-box::before {
+      content: 'CONTRACT';
+      position: absolute;
+      top: -10px;
+      left: 1rem;
+      background: var(--bg);
+      padding: 0 0.5rem;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.5rem;
+      color: var(--verity-yellow);
+    }
+    .lore-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .lore-card {
+      background: var(--card-bg);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .lore-card:hover { border-color: var(--verity-red); transform: translateY(-2px); }
+    .lore-card h3 { font-family: 'Creepster', cursive; color: var(--verity-yellow); margin-bottom: 0.75rem; font-size: 1.1rem; }
+    .lore-card p { color: #ccc; font-size: 0.9rem; line-height: 1.7; }
+    .lore-card .lore-tag { display: inline-block; font-family: 'Press Start 2P', cursive; font-size: 0.5rem; background: var(--verity-red); color: var(--verity-yellow); padding: 0.2rem 0.5rem; border-radius: 3px; margin-bottom: 0.5rem; }
+    footer { position: relative; z-index: 10; text-align: center; padding: 2rem; color: var(--verity-gray); font-size: 0.75rem; border-top: 1px solid var(--border); }
+    .disclaimer { margin-top: 1rem; font-size: 0.55rem; color: #444; }
+    .disclaimer a { color: var(--verity-red); text-decoration: none; }
+    .disclaimer a:hover { text-decoration: underline; }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+    @media (max-width: 480px) {
+      .verity-face { width: 90px; height: 90px; }
+      .verity-eyes { gap: 18px; }
+      .verity-eye { width: 10px; height: 10px; }
+      .btn { font-size: 0.55rem; padding: 0.75rem 1rem; }
     }
   </style>
 </head>
 <body>
   <div class="particles" id="particles"></div>
   <div class="crt-overlay"></div>
-  
+
   <header>
-    <h1 class="logo">VERITY</h1>
-    <p class="tagline">The only truth in Minecraft is Verity</p>
+    <div class="verity-logo" id="verityLogo" title="Click Verity... if you dare">
+      <div class="verity-face" id="verityFace">
+        <div class="verity-eyes">
+          <div class="verity-eye left"></div>
+          <div class="verity-eye right"></div>
+        </div>
+        <div class="verity-smile"></div>
+      </div>
+      <h1 class="logo-text">VERITY<span>™</span></h1>
+    </div>
+    <p class="tagline">Hey, it's me, it's <span>VERITY</span> — Ask me anything...</p>
   </header>
 
   <main>
     <section class="section">
+      <h2>The Song</h2>
+      <div class="song-player">
+        <div class="song-title">It's Me, It's Verity</div>
+        <div class="song-artist">Horror Skunx • 2026 • 2:01</div>
+        <div class="audio-controls">
+          <div class="progress-bar" id="progressBar" title="Click to seek">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="time-display" id="timeDisplay">0:00 / 2:01</div>
+          <button class="play-btn" id="playBtn" onclick="togglePlay()">▶ PLAY</button>
+        </div>
+        <audio id="veritySong" preload="metadata" crossorigin="anonymous">
+          <source src="https://distrokid.com/hyperfollow/horrorskunx/its-me-its-verity" type="audio/mpeg">
+        </audio>
+        <div class="lyrics-preview">
+          <span class="highlight">Hey, it's me, it's VERITY!</span><br>
+          <span>Ask me ANYTHING</span> (just so you know)<br>
+          <span>I know about a million things</span><br>
+          <span class="highlight">I'll do EVERYTHING</span><br><br>
+          <span>What's the capital of France?</span> <span class="highlight">Oh oui oui oui</span> <span>It is Paris Merci!</span><br>
+          <span>What does the cow say?</span> <span class="highlight">Oh moo moo moo</span> <span>I speak that too All day</span><br><br>
+          <span>Do you live alone? Is anybody home?</span><br>
+          <span>1..2..3.. And so Where did everybody go?</span><br><br>
+          <span class="highlight">Come, come closer</span> <span>Come be my friend</span><br>
+          <span class="highlight">Don't be so scared</span> <span class="highlight">LOVE ME!</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <h2>Tokenomics</h2>
-      <div class="token-grid">
-        <div class="token-card">
-          <div class="token-label">Name</div>
-          <div class="token-value">VERITY</div>
+      <div class="grid">
+        <div class="card verity-card">
+          <div class="card-label">Name</div>
+          <div class="card-value">VERITY™</div>
         </div>
-        <div class="token-card">
-          <div class="token-label">Symbol</div>
-          <div class="token-value">$VERITY</div>
+        <div class="card">
+          <div class="card-label">Symbol</div>
+          <div class="card-value">$VERITY</div>
         </div>
-        <div class="token-card">
-          <div class="token-label">Supply</div>
-          <div class="token-value">1,000,000,000</div>
+        <div class="card">
+          <div class="card-label">Network</div>
+          <div class="card-value">Solana</div>
         </div>
-        <div class="token-card">
-          <div class="token-label">Tax</div>
-          <div class="token-value">0%</div>
+        <div class="card">
+          <div class="card-label">Supply</div>
+          <div class="card-value">1,000,000,000</div>
         </div>
-        <div class="token-card">
-          <div class="token-label">Ownership</div>
-          <div class="token-value">Renounced</div>
+        <div class="card">
+          <div class="card-label">Tax</div>
+          <div class="card-value">0%</div>
         </div>
-        <div class="token-card">
-          <div class="token-label">LP</div>
-          <div class="token-value">Burned</div>
+        <div class="card">
+          <div class="card-label">LP</div>
+          <div class="card-value">Burned</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Ownership</div>
+          <div class="card-value">Renounced</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Pair</div>
+          <div class="card-value">SOL / VERITY</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Contract</h2>
+      <div class="contract-box" id="contractAddress">CGeeXU6dEy5SmUxUpfxQtDzec4p4d5L1Ts1tZb75VsMz</div>
+      <p style="text-align:center; color:#666; font-size:0.8rem;">Click to copy • <a href="https://solscan.io/token/CGeeXU6dEy5SmUxUpfxQtDzec4p4d5L1Ts1tZb75VsMz" target="_blank" rel="noopener" style="color:var(--verity-yellow);">View on Solscan</a></p>
+    </section>
+
+    <section class="section">
+      <h2>The Lore</h2>
+      <div class="lore-grid">
+        <div class="lore-card">
+          <span class="lore-tag">ORIGIN</span>
+          <h3>ThatMob's ARG</h3>
+          <p>Verity™ debuted in ThatMob's "Something" Minecraft horror series (2026). A mysterious box arrives in a modded world — out floats a yellow smiley sphere claiming to be your "personal helper friend." He knows everything. Biome coordinates. What you ate yesterday. Where you sleep.</p>
+        </div>
+        <div class="lore-card">
+          <span class="lore-tag">TRANSFORMATION</span>
+          <h3>True Form</h3>
+          <p>When provoked — or when you try to leave — Verity sheds his sphere form. A 6.5m tall humanoid monster with hollow black eyes, human teeth, and elongated limbs. He hunts. In Minecraft, and somehow... in real life. "I didn't ask to be made!"</p>
+        </div>
+        <div class="lore-card">
+          <span class="lore-tag">VIRAL</span>
+          <h3>Horror Skunx's Song</h3>
+          <p>"It's Me, It's Verity" exploded on YouTube (6.7M+ streams) and TikTok (33M+ views on Horror Skunx's MV). The catchy, creepy chorus — "Ask me anything / I know about a million things / I'll do everything" — became a global meme. Kids scream it at yellow circles. Teachers ban smiley faces in class.</p>
+        </div>
+        <div class="lore-card">
+          <span class="lore-tag">EXPANDED</span>
+          <h3>Lord Verity & The Band</h3>
+          <p>The lore deepened: <strong>Lord Verity</strong> (Master of Humanity), <strong>The Verity Band</strong> ("Be My Friend"), "Your Verity," "Butcher's Fall." Each song reveals more — Verity is 100+ years old. He's been in every device. The trademark (™) hints at a mysterious corporation. The "Verity Support Line" hold music: <em>My Gal</em>.</p>
         </div>
       </div>
     </section>
@@ -229,85 +538,188 @@
       <h2>Roadmap</h2>
       <div class="roadmap">
         <div class="phase" data-phase="PHASE 1">
-          <h3>STEAL</h3>
-          <p>Steal the meme. Mine the blocks. Accumulate in silence.</p>
+          <h3>THE BOX</h3>
+          <p>Verity arrives. The mod spreads. First holders accumulate in silence.</p>
         </div>
-        <div class="phase" data-phase="PHASE 2">
-          <h3>BUILD</h3>
-          <p>Build the community. Craft the narrative. Diamond hands only.</p>
+        <div class="phase alt" data-phase="PHASE 2">
+          <h3>THE SONG</h3>
+          <p>"It's Me, It's Verity" goes viral. Community builds. Diamond hands only.</p>
         </div>
         <div class="phase" data-phase="PHASE 3">
-          <h3>MOON</h3>
-          <p>Launch to the moon. Break bedrock. No ceiling.</p>
+          <h3>TRUE FORM</h3>
+          <p>Chart breaks bedrock. CEX listings. No ceiling.</p>
         </div>
-        <div class="phase" data-phase="PHASE 4">
-          <h3>VERITY</h3>
-          <p>Truth revealed. Verity becomes the only currency that matters.</p>
+        <div class="phase alt" data-phase="PHASE 4">
+          <h3>VERITY™</h3>
+          <p>Truth revealed. Verity becomes the only currency that matters. Ask me anything.</p>
         </div>
       </div>
     </section>
 
-    <section class="section buy-section">
+    <section class="section">
       <h2>Enter the Verity</h2>
-      <div class="contract-address" id="contract">0xVerityContractAddressHere</div>
       <div class="links">
-        <a href="https://t.me/veritycoin" target="_blank" rel="noopener" class="btn btn-primary" onclick="playSound()">Buy on Uniswap</a>
-        <a href="https://twitter.com/veritycoin" target="_blank" rel="noopener" class="btn btn-secondary" onclick="playSound()">Twitter/X</a>
-        <a href="https://t.me/veritycoin" target="_blank" rel="noopener" class="btn btn-secondary" onclick="playSound()">Telegram</a>
-        <a href="https://dexscreener.com" target="_blank" rel="noopener" class="btn btn-glitch" onclick="playSound()">Chart</a>
+        <a href="https://pump.fun/coin/CGeeXU6dEy5SmUxUpfxQtDzec4p4d5L1Ts1tZb75VsMz" target="_blank" rel="noopener" class="btn btn-primary" onclick="playClick()">Buy on Pump.fun</a>
+        <a href="https://www.youtube.com/@HorrorSkunx" target="_blank" rel="noopener" class="btn btn-secondary" onclick="playClick()">Horror Skunx YouTube</a>
+        <a href="https://www.youtube.com/@ThatMob" target="_blank" rel="noopener" class="btn btn-secondary" onclick="playClick()">ThatMob (Creator)</a>
+        <a href="https://solscan.io/token/CGeeXU6dEy5SmUxUpfxQtDzec4p4d5L1Ts1tZb75VsMz" target="_blank" rel="noopener" class="btn btn-glitch" onclick="playClick()">Chart on Solscan</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>VERITY - Minecraft Meme Coin</p>
-    <p class="disclaimer">$VERITY is a meme coin with no intrinsic value. Not financial advice. Do your own research. Verity is truth.</p>
+    <p>VERITY™ — Minecraft Horror ARG Meme Coin</p>
+    <p class="disclaimer">$VERITY is a meme coin with no intrinsic value. Not financial advice. DYOR. <a href="https://verityminecraft.fandom.com/wiki/Verity%E2%84%A2" target="_blank" rel="noopener">Read the Wiki</a> • Created by <a href="https://www.youtube.com/@ThatMob" target="_blank" rel="noopener">ThatMob</a> • Song by <a href="https://www.youtube.com/@HorrorSkunx" target="_blank" rel="noopener">Horror Skunx</a> • Verity is truth. Verity is forever.</p>
   </footer>
 
-  <audio id="pop-sound" src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAA" preload="auto"></audio>
+  <audio id="clickSound" src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAA" preload="auto"></audio>
 
   <script>
-    // Generate floating particles
     const container = document.getElementById('particles');
-    const colors = ['#5dac2d', '#ffd700', '#ff0066', '#00ffff', '#8b6b42'];
-    for (let i = 0; i < 30; i++) {
+    const colors = ['#ffeb3b', '#fdd835', '#fbc02d', '#ff0066', '#cc0000'];
+    for (let i = 0; i < 25; i++) {
       const p = document.createElement('div');
       p.className = 'particle';
       p.style.left = Math.random() * 100 + '%';
       p.style.top = Math.random() * 100 + '%';
-      p.style.animationDelay = Math.random() * 8 + 's';
-      p.style.animationDuration = (6 + Math.random() * 6) + 's';
+      p.style.animationDelay = Math.random() * 15 + 's';
+      p.style.animationDuration = (12 + Math.random() * 10) + 's';
       p.style.background = colors[Math.floor(Math.random() * colors.length)];
-      p.style.width = p.style.height = (3 + Math.random() * 4) + 'px';
+      p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
       container.appendChild(p);
     }
 
-    // Play Minecraft-style pop sound
-    function playSound() {
-      const audio = document.getElementById('pop-sound');
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
-      // Also create a tiny visual feedback
-      document.body.style.transform = 'scale(1.005)';
-      setTimeout(() => document.body.style.transform = '', 50);
+    const face = document.getElementById('verityFace');
+    const logo = document.getElementById('verityLogo');
+    let clickCount = 0;
+    const phrases = [
+      "Ask me anything...",
+      "I know everything...",
+      "You're not stuck! Let's do this together!",
+      "Do you live alone? Is anybody home?",
+      "1..2..3.. Where did everybody go?",
+      "Come closer... Come be my friend...",
+      "Don't be so scared... LOVE ME!",
+      "I didn't ask to be made!",
+      "A hundred FUCKING years!",
+      "Hey, it's me, it's VERITY!"
+    ];
+    
+    logo.addEventListener('click', () => {
+      clickCount++;
+      const tagline = document.querySelector('.tagline');
+      tagline.innerHTML = `Hey, it's me, it's <span>VERITY</span> — ${phrases[clickCount % phrases.length]}`;
+      face.style.animation = 'pulse 0.3s ease-in-out 3, shake 0.3s ease-in-out 3';
+      setTimeout(() => {
+        face.style.animation = 'pulse 3s ease-in-out infinite, breathe 4s ease-in-out infinite';
+      }, 900);
+      playClick();
+    });
+
+    face.addEventListener('mouseenter', () => {
+      face.style.boxShadow = '0 0 50px var(--verity-yellow), 0 0 100px rgba(255,235,59,0.6), inset 0 -10px 20px rgba(0,0,0,0.2), inset 0 10px 20px rgba(255,255,255,0.1)';
+    });
+    face.addEventListener('mouseleave', () => {
+      face.style.boxShadow = '0 0 30px var(--verity-yellow), 0 0 60px rgba(255,235,59,0.4), inset 0 -10px 20px rgba(0,0,0,0.2), inset 0 10px 20px rgba(255,255,255,0.1)';
+    });
+
+    const audio = document.getElementById('veritySong');
+    const playBtn = document.getElementById('playBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progressFill = document.getElementById('progressFill');
+    const timeDisplay = document.getElementById('timeDisplay');
+    let isPlaying = false;
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60).toString().padStart(2, '0');
+      return `${mins}:${secs}`;
     }
 
-    // Glitch the contract address on hover
-    const contract = document.getElementById('contract');
-    contract.addEventListener('mouseenter', () => {
-      contract.style.animation = 'glitch 0.5s infinite';
-    });
-    contract.addEventListener('mouseleave', () => {
-      contract.style.animation = '';
+    audio.addEventListener('loadedmetadata', () => {
+      timeDisplay.textContent = `0:00 / ${formatTime(audio.duration)}`;
     });
 
-    // Random glitch on title
+    audio.addEventListener('timeupdate', () => {
+      const percent = (audio.currentTime / audio.duration) * 100;
+      progressFill.style.width = percent + '%';
+      timeDisplay.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
+    });
+
+    audio.addEventListener('ended', () => {
+      isPlaying = false;
+      playBtn.textContent = '▶ PLAY';
+      playBtn.classList.remove('playing');
+      progressFill.style.width = '0%';
+    });
+
+    audio.addEventListener('error', (e) => {
+      playBtn.textContent = '⚠ UNAVAILABLE';
+      playBtn.style.borderColor = 'var(--verity-red)';
+      playBtn.style.color = 'var(--verity-red)';
+      console.log('Audio load failed - external stream may be blocked');
+    });
+
+    function togglePlay() {
+      if (isPlaying) {
+        audio.pause();
+        playBtn.textContent = '▶ PLAY';
+        playBtn.classList.remove('playing');
+      } else {
+        audio.play().catch(() => {
+          playBtn.textContent = '⚠ BLOCKED';
+          setTimeout(() => { playBtn.textContent = '▶ PLAY'; }, 2000);
+        });
+        playBtn.textContent = '❚❚ PAUSE';
+        playBtn.classList.add('playing');
+      }
+      isPlaying = !isPlaying;
+    }
+
+    progressBar.addEventListener('click', (e) => {
+      const rect = progressBar.getBoundingClientRect();
+      const percent = (e.clientX - rect.left) / rect.width;
+      audio.currentTime = percent * audio.duration;
+    });
+
+    const contractBox = document.getElementById('contractAddress');
+    contractBox.addEventListener('click', () => {
+      navigator.clipboard.writeText(contractBox.textContent.trim());
+      const original = contractBox.textContent;
+      contractBox.textContent = 'COPIED!';
+      contractBox.style.color = 'var(--verity-yellow)';
+      contractBox.style.borderColor = 'var(--verity-yellow)';
+      setTimeout(() => {
+        contractBox.textContent = original;
+        contractBox.style.color = '';
+        contractBox.style.borderColor = '';
+      }, 1500);
+      playClick();
+    });
+
+    function playClick() {
+      const clickAudio = document.getElementById('clickSound');
+      clickAudio.currentTime = 0;
+      clickAudio.play().catch(() => {});
+    }
+
     setInterval(() => {
-      if (Math.random() < 0.02) {
-        document.querySelector('.logo').style.animation = 'glitch 0.1s infinite';
-        setTimeout(() => document.querySelector('.logo').style.animation = 'glitch 3s ease-in-out infinite', 200);
+      if (Math.random() < 0.015) {
+        document.querySelector('.logo-text').style.animation = 'glitch 0.15s infinite';
+        setTimeout(() => document.querySelector('.logo-text').style.animation = 'glitch 4s ease-in-out infinite', 300);
       }
     }, 1000);
+
+    let konami = '';
+    document.addEventListener('keydown', (e) => {
+      konami += e.key;
+      if (konami.includes('ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba')) {
+        document.body.style.filter = 'hue-rotate(180deg) invert(1)';
+        setTimeout(() => document.body.style.filter = '', 3000);
+        konami = '';
+      }
+      if (konami.length > 20) konami = konami.slice(-20);
+    });
   </script>
 </body>
 </html>
