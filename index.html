@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERITY | The Only Truth in Minecraft</title>
+  <meta name="description" content="VERITY - Minecraft meme coin. The only truth in Minecraft is Verity. $VERITY on Ethereum.">
+  <meta property="og:title" content="VERITY - The Only Truth in Minecraft">
+  <meta property="og:description" content="Minecraft meme coin. Verity is truth. $VERITY">
+  <meta property="og:image" content="og.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mc-green: #5dac2d;
+      --mc-dark: #1a1a1a;
+      --mc-dirt: #8b6b42;
+      --mc-stone: #7d7d7d;
+      --mc-gold: #ffd700;
+      --mc-red: #cc3333;
+      --glitch-1: #ff0066;
+      --glitch-2: #00ffff;
+      --bg: #0d0d0d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @keyframes scanlines { 0% { background-position: 0 0; } 100% { background-position: 0 4px; } }
+    @keyframes float { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } }
+    @keyframes glitch { 0% { text-shadow: 2px 0 var(--glitch-1), -2px 0 var(--glitch-2); } 20% { text-shadow: -2px 0 var(--glitch-1), 2px 0 var(--glitch-2); } 40% { text-shadow: 2px 2px var(--glitch-1), -2px -2px var(--glitch-2); } 60% { text-shadow: -1px 0 var(--glitch-1), 1px 0 var(--glitch-2); } 80% { text-shadow: 0 2px var(--glitch-1), 0 -2px var(--glitch-2); } 100% { text-shadow: 2px 0 var(--glitch-1), -2px 0 var(--glitch-2); } }
+    @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 20px var(--mc-green), 0 0 40px var(--mc-green); } 50% { box-shadow: 0 0 40px var(--mc-green), 0 0 80px var(--mc-green); } }
+    @keyframes crt-flicker { 0% { opacity: 1; } 98% { opacity: 1; } 99% { opacity: 0.95; } 100% { opacity: 1; } }
+    body {
+      font-family: 'VT323', monospace;
+      background: var(--bg);
+      color: #e0e0e0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      line-height: 1.6;
+    }
+    body::before {
+      content: '';
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, transparent 1px, transparent 3px);
+      background-size: 100% 4px;
+      animation: scanlines 0.3s linear infinite;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+    .crt-overlay {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.4) 100%);
+      pointer-events: none; z-index: 9998;
+      animation: crt-flicker 4s ease-in-out infinite;
+    }
+    .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: hidden; }
+    .particle {
+      position: absolute; width: 4px; height: 4px;
+      background: var(--mc-green);
+      border-radius: 0;
+      animation: float 8s ease-in-out infinite;
+      opacity: 0.6;
+      image-rendering: pixelated;
+    }
+    .particle:nth-child(odd) { background: var(--mc-gold); animation-duration: 10s; }
+    .particle:nth-child(3n) { background: var(--glitch-1); animation-duration: 6s; }
+    header { position: relative; z-index: 10; padding: 2rem 1rem; text-align: center; }
+    .logo {
+      font-family: 'Press Start 2P', cursive;
+      font-size: clamp(2rem, 8vw, 4rem);
+      color: var(--mc-green);
+      text-shadow: 4px 4px 0 var(--mc-dark), 8px 8px 0 var(--mc-dirt);
+      animation: glitch 3s ease-in-out infinite;
+      letter-spacing: 0.1em;
+      display: inline-block;
+      transform: rotate(-2deg);
+    }
+    .tagline {
+      font-family: 'VT323', monospace;
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: var(--mc-gold);
+      margin-top: 0.5rem;
+      text-shadow: 2px 2px 0 var(--mc-dark);
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    main { position: relative; z-index: 10; max-width: 900px; margin: 0 auto; padding: 0 1rem 4rem; }
+    .section {
+      background: linear-gradient(145deg, #151515, #0a0a0a);
+      border: 3px solid var(--mc-stone);
+      border-radius: 8px;
+      margin: 2rem 0;
+      padding: 2rem;
+      position: relative;
+      image-rendering: pixelated;
+    }
+    .section::before {
+      content: ''; position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px;
+      background: linear-gradient(45deg, var(--mc-green), var(--mc-gold), var(--glitch-1), var(--glitch-2));
+      border-radius: 10px; z-index: -1; opacity: 0.3; filter: blur(8px);
+    }
+    .section h2 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+      color: var(--mc-green);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      border-bottom: 2px dashed var(--mc-stone);
+      padding-bottom: 0.5rem;
+    }
+    .token-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+    .token-card {
+      background: rgba(0,0,0,0.5);
+      border: 2px solid var(--mc-stone);
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .token-card:hover { border-color: var(--mc-green); transform: translateY(-4px) rotate(1deg); }
+    .token-label { font-family: 'Press Start 2P', cursive; font-size: 0.6rem; color: var(--mc-stone); text-transform: uppercase; }
+    .token-value { font-family: 'VT323', monospace; font-size: 1.5rem; color: var(--mc-gold); margin-top: 0.5rem; word-break: break-all; }
+    .roadmap { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    .phase {
+      background: rgba(0,0,0,0.5);
+      border: 2px solid var(--mc-stone);
+      padding: 1.5rem;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .phase::before {
+      content: attr(data-phase);
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      font-family: 'Press Start 2P', cursive; font-size: 0.5rem;
+      background: var(--mc-green); color: var(--mc-dark);
+      padding: 0.2rem 0.6rem; border: 2px solid var(--mc-dark);
+    }
+    .phase:hover { border-color: var(--mc-gold); transform: scale(1.02); }
+    .phase h3 { font-family: 'Press Start 2P', cursive; font-size: 0.7rem; color: var(--mc-gold); margin-bottom: 0.5rem; }
+    .phase p { font-size: 0.9rem; color: #aaa; }
+    .links { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1rem; }
+    .btn {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.7rem;
+      padding: 1rem 2rem;
+      border: 3px solid;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn:hover::before { left: 100%; }
+    .btn-primary { background: var(--mc-green); color: var(--mc-dark); border-color: var(--mc-green); }
+    .btn-primary:hover { background: var(--mc-gold); border-color: var(--mc-gold); color: var(--mc-dark); }
+    .btn-secondary { background: transparent; color: var(--mc-gold); border-color: var(--mc-stone); }
+    .btn-secondary:hover { background: var(--mc-stone); border-color: var(--mc-gold); color: var(--mc-dark); }
+    .btn-glitch { background: transparent; color: var(--glitch-1); border-color: var(--glitch-1); animation: glitch 2s infinite; }
+    .buy-section { text-align: center; padding: 3rem 1rem; }
+    .contract-address {
+      font-family: 'VT323', monospace;
+      font-size: 1rem;
+      color: var(--mc-stone);
+      background: rgba(0,0,0,0.5);
+      border: 1px dashed var(--mc-stone);
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 90%;
+      word-break: break-all;
+      user-select: all;
+    }
+    footer { position: relative; z-index: 10; text-align: center; padding: 2rem; color: var(--mc-stone); font-size: 0.8rem; border-top: 1px solid var(--mc-stone); }
+    .disclaimer { margin-top: 1rem; font-size: 0.6rem; color: #555; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+  <div class="crt-overlay"></div>
+  
+  <header>
+    <h1 class="logo">VERITY</h1>
+    <p class="tagline">The only truth in Minecraft is Verity</p>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Tokenomics</h2>
+      <div class="token-grid">
+        <div class="token-card">
+          <div class="token-label">Name</div>
+          <div class="token-value">VERITY</div>
+        </div>
+        <div class="token-card">
+          <div class="token-label">Symbol</div>
+          <div class="token-value">$VERITY</div>
+        </div>
+        <div class="token-card">
+          <div class="token-label">Supply</div>
+          <div class="token-value">1,000,000,000</div>
+        </div>
+        <div class="token-card">
+          <div class="token-label">Tax</div>
+          <div class="token-value">0%</div>
+        </div>
+        <div class="token-card">
+          <div class="token-label">Ownership</div>
+          <div class="token-value">Renounced</div>
+        </div>
+        <div class="token-card">
+          <div class="token-label">LP</div>
+          <div class="token-value">Burned</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Roadmap</h2>
+      <div class="roadmap">
+        <div class="phase" data-phase="PHASE 1">
+          <h3>STEAL</h3>
+          <p>Steal the meme. Mine the blocks. Accumulate in silence.</p>
+        </div>
+        <div class="phase" data-phase="PHASE 2">
+          <h3>BUILD</h3>
+          <p>Build the community. Craft the narrative. Diamond hands only.</p>
+        </div>
+        <div class="phase" data-phase="PHASE 3">
+          <h3>MOON</h3>
+          <p>Launch to the moon. Break bedrock. No ceiling.</p>
+        </div>
+        <div class="phase" data-phase="PHASE 4">
+          <h3>VERITY</h3>
+          <p>Truth revealed. Verity becomes the only currency that matters.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section buy-section">
+      <h2>Enter the Verity</h2>
+      <div class="contract-address" id="contract">0xVerityContractAddressHere</div>
+      <div class="links">
+        <a href="https://t.me/veritycoin" target="_blank" rel="noopener" class="btn btn-primary" onclick="playSound()">Buy on Uniswap</a>
+        <a href="https://twitter.com/veritycoin" target="_blank" rel="noopener" class="btn btn-secondary" onclick="playSound()">Twitter/X</a>
+        <a href="https://t.me/veritycoin" target="_blank" rel="noopener" class="btn btn-secondary" onclick="playSound()">Telegram</a>
+        <a href="https://dexscreener.com" target="_blank" rel="noopener" class="btn btn-glitch" onclick="playSound()">Chart</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>VERITY - Minecraft Meme Coin</p>
+    <p class="disclaimer">$VERITY is a meme coin with no intrinsic value. Not financial advice. Do your own research. Verity is truth.</p>
+  </footer>
+
+  <audio id="pop-sound" src="data:audio/wav;base64,UklGRigAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQQAAAAA" preload="auto"></audio>
+
+  <script>
+    // Generate floating particles
+    const container = document.getElementById('particles');
+    const colors = ['#5dac2d', '#ffd700', '#ff0066', '#00ffff', '#8b6b42'];
+    for (let i = 0; i < 30; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.top = Math.random() * 100 + '%';
+      p.style.animationDelay = Math.random() * 8 + 's';
+      p.style.animationDuration = (6 + Math.random() * 6) + 's';
+      p.style.background = colors[Math.floor(Math.random() * colors.length)];
+      p.style.width = p.style.height = (3 + Math.random() * 4) + 'px';
+      container.appendChild(p);
+    }
+
+    // Play Minecraft-style pop sound
+    function playSound() {
+      const audio = document.getElementById('pop-sound');
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+      // Also create a tiny visual feedback
+      document.body.style.transform = 'scale(1.005)';
+      setTimeout(() => document.body.style.transform = '', 50);
+    }
+
+    // Glitch the contract address on hover
+    const contract = document.getElementById('contract');
+    contract.addEventListener('mouseenter', () => {
+      contract.style.animation = 'glitch 0.5s infinite';
+    });
+    contract.addEventListener('mouseleave', () => {
+      contract.style.animation = '';
+    });
+
+    // Random glitch on title
+    setInterval(() => {
+      if (Math.random() < 0.02) {
+        document.querySelector('.logo').style.animation = 'glitch 0.1s infinite';
+        setTimeout(() => document.querySelector('.logo').style.animation = 'glitch 3s ease-in-out infinite', 200);
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
