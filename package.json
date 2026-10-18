@@ -1,0 +1,15 @@
+{
+  "name": "verity-meme",
+  "version": "1.0.0",
+  "description": "VERITY - Minecraft meme coin website",
+  "scripts": {
+    "deploy": "gh-pages -d .",
+    "dev": "npx serve . -p 3000"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "serve": "^14.2.1"
+  },
+  "keywords": ["meme", "coin", "minecraft", "verity", "crypto"],
+  "license": "MIT"
+}
